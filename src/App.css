@@ -4,9 +4,25 @@
     padding: 2rem;
     text-align: center;
     box-shadow: 0.25rem 0.25rem black;
-    background-color: #f8f8f8;;
+    background-color: #f8f8f8;
+    transition: all 0.1s ease-in-out;
 }
 
-.card img  {
-
+.card:hover {
+box-shadow: 025rem 0.25rem black;
+translate: -0.25rem -0.25rem;
 }
+
+.card > h2 {
+    font-family: Inter, Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .card > img {
+    border-radius: 1rem;
+    transition: all 0.1s ease-in-out;
+ }
+
+ .card:hover > img {
+    translate: -0.25rem -0.25rem;
+    box-shadow: 0.25rem 0.25rem #fea6ca;
+ }
