@@ -1,14 +1,26 @@
-import {useParams} from "react-router-dom"
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 
 export default function ReadById() {
-    return <div><ReadById></ReadById></div>
-    const { id } = useParams ()
+  const { id } = useParams()
 
+  const [item, setItem] = useState({})
+
+  async function carregarDadosApi() {
     const apiUrl = `https://rickandmortyapi.com/api/character/${id}`
-    // TODO: Implementar o carregamento da API
-    // TODO: Guardar a informação recebida da API em um estado
-    // TODO: Exibir essas informações no JSX
 
-    return <div>ReadById: {id}</div>
+    const response = await fetch(apiUrl)
 
+    const body = await response.json()
+
+    setItem(body)
+  }
+
+  useEffect(function () {
+    carregarDadosApi()
+  }, [])
+
+  // TODO: Exibir essas informações no JSX
+
+  return <div>ReadById: {id} - {item.name}</div>
 }

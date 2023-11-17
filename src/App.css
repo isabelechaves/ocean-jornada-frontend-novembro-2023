@@ -1,35 +1,43 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
 .card {
-    border: 0.1rem solid black;
-    border-radius: 1rem;
-    padding: 2rem;
-    text-align: center;
-    background: #f8f8f8;
-    transition: all 0.1s ease-in-out;
-    cursor: pointer;
+  border: 0.1rem solid black;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  background: #f8f8f8;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  width: 20rem;
 }
 
 .card:hover {
-box-shadow: 025rem 0.25rem black;
-translate: -0.25rem -0.25rem;
+  box-shadow: 0.25rem 0.25rem black;
+  translate: -0.25rem -0.25rem;
 }
 
 .card > h2 {
-    font-family: Inter, Verdana, Geneva, Tahoma, sans-serif;
-    border-left: 0.5rem solid #97d7d7;
-  }
-  
-  .card > img {
-    border-radius: 1rem;
-    transition: all 0.1s ease-in-out;
-    border: 0.1rem solid black
- }
+  font-family: Inter, Verdana, Geneva, Tahoma, sans-serif;
+  border-left: 0.5rem solid #97d7d7;
+}
 
- .card:hover > img {
-    translate: -0.25rem -0.25rem;
-    box-shadow: 0.25rem 0.25rem #FEA6CA;
- }
+.card > img {
+  border-radius: 1rem;
+  transition: all 0.1s ease-in-out;
+  border: 0.1rem solid black;
+}
 
- .tags {
+.card:hover > img {
+  translate: -0.25rem -0.25rem;
+  box-shadow: 0.25rem 0.25rem #FEA6CA;
+}
+
+.tags {
   display: flex;
   justify-content: center;
   gap: 1rem;
